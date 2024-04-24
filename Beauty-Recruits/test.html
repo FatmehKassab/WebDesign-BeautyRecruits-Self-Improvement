@@ -1,0 +1,192 @@
+<!-- <style>
+    .div-1 {
+        width: 500px;
+        height: 200px;
+
+        display: flex;
+
+        background-color: rebeccapurple;
+    }
+    .div-2 {
+        width: 100px;
+        height: 100%;
+
+        background-color: red;
+    }
+    .div-3 {
+        width: calc(100% - 100px);
+        height: 100%;
+
+        display: flex;
+        flex-direction: column;
+
+        background-color: white;
+    }
+    .div-4 {
+        width: 100%;
+        height: 50%;
+
+        background-color: green;
+    }
+    .div-5 {
+        width: 100%;
+        height: 50%;
+
+        background-color: black;
+        }
+</style>
+
+<div class="div-1">
+    <div class="div-2"></div>
+    <div class="div-3">
+        <div class="div-4"></div>
+        <div class="div-5"></div>
+    </div>
+    <div class="fruit"></div>
+    <div class="bb"></div>
+</div> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Job Seeker Registration</title>
+<style>
+    /* Add your custom CSS styles here */
+    body {
+        font-family: Arial, sans-serif;
+    }
+
+    h2 {
+        text-align: center;
+    }
+
+    form {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: flex-start;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    form > div {
+        margin: 10px;
+        flex: 1 0 calc(50% - 20px);
+    }
+
+    label {
+        display: block;
+        font-weight: bold;
+       
+    }
+
+    input, textarea {
+        width: 100%;
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        margin-top: 5px;
+    }
+
+    button {
+        padding: 10px 20px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+    button:hover {
+        background-color: #0056b3;
+    }
+</style>
+</head>
+<body>
+
+<h2>Create an Account as a Job Seeker</h2>
+
+<button onclick="toggleForm()">Toggle Form</button>
+
+<form id="registrationForm" style="display: none;">
+    <div>
+        <label for="fullName">Full Name:</label>
+        <input type="text" id="fullName" name="fullName" required>
+    </div>
+
+    <div>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+    </div>
+
+    <div>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" required>
+    </div>
+
+    <div>
+        <label for="confirmPassword">Confirm Password:</label>
+        <input type="password" id="confirmPassword" name="confirmPassword" required>
+    </div>
+
+    <div>
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
+    </div>
+
+    <div>
+        <label for="title">Title:</label>
+        <input type="text" id="title" name="title">
+    </div>
+
+    <div>
+        <label for="expertise">Expertise:</label>
+        <input type="text" id="expertise" name="expertise">
+    </div>
+
+    <div>
+        <label for="yearsOfExperience">Years of Experience:</label>
+        <input type="number" id="yearsOfExperience" name="yearsOfExperience">
+    </div>
+
+    <div>
+        <label for="location">Location:</label>
+        <input type="text" id="location" name="location">
+    </div>
+
+    <div>
+        <label for="phone">Phone:</label>
+        <input type="tel" id="phone" name="phone" pattern="^\+(?:[0-9] ?){6,14}[0-9]">
+    </div>
+
+    <div>
+        <label for="resume">Resume in PDF:</label>
+        <input type="file" id="resume" name="resume" accept=".pdf">
+    </div>
+
+    <div style="flex: 1 0 100%;">
+        <label for="description">Description:</label><br>
+        <textarea id="description" name="description" rows="4" cols="50"></textarea>
+    </div>
+
+    <button type="submit">Register Now</button>
+</form>
+
+<script>
+    // Function to toggle the visibility of the registration form
+    function toggleForm() {
+        var form = document.getElementById("registrationForm");
+        if (form.style.display === "none") {
+            form.style.display = "flex";
+        } else {
+            form.style.display = "none";
+        }
+    }
+</script>
+
+</body>
+</html>

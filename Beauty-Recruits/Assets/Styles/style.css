@@ -1,0 +1,78 @@
+:root {
+    --primary-color: 247, 129, 84;
+    /*orange*/
+    --primary-color-hover: 192, 95, 56;
+    --secondary-color: 51, 97, 97;
+    --secondary-color-hover: 35, 68, 68;
+    --color-white: white;
+    --color-black: 26, 26, 26;
+    --text-color: #454545;
+    --shadow-color: 230, 233, 249, 0.9;
+
+    /* --navbar-height: 200px; 
+    --body-padding: 20px; */
+}
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Muli', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:hover {
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+.main {
+    width: 100%;
+    height: auto;
+}
+
+
+/*Logo styles */
+
+.custom-button {
+    width: fit-content;
+    height: auto;
+
+    display: inline-block;
+    font-size: 16px;
+    font-weight: normal;
+    padding: 15px 50px;
+    color: var(--color-white);
+    border-radius: 2px;
+    text-transform: capitalize;
+    transition-duration: .3s;
+
+}
+
+.custom-button.primary-color {
+    background-color: rgb(var(--primary-color));
+    color: var(--color-white);
+}
+
+.custom-button.primary-color:hover {
+    background-color: rgb(var(--primary-color-hover));
+    color: var(--color-white);
+}
+
+.custom-button.secondary-color {
+    background-color: rgb(var(--secondary-color));
+    color: var(--color-white);
+}
+
+.custom-button.secondary-color:hover {
+    background-color: rgb(var(--secondary-color-hover));
+    color: var(--color-white);
+}
