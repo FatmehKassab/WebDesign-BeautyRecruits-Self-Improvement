@@ -72,3 +72,65 @@ window.addEventListener('resize', () => {
         profileCloseBtn.classList.remove('active');
     }
 });
+
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    const boxes = document.querySelectorAll('.box');
+    const prevPageButton = document.getElementById('prevPage');
+    const nextPageButton = document.getElementById('nextPage');
+    const currentPageSpan = document.getElementById('currentPage');
+    const paginationButtons = document.querySelectorAll('.page-btn');
+
+    const itemsPerPage = 3; // Number of boxes per page
+    let currentPage = 1;
+
+    // Function to show the boxes for the current page
+    const showBoxes = () => {
+        const startIndex = (currentPage - 1) * itemsPerPage;
+        const endIndex = Math.min(startIndex + itemsPerPage, boxes.length);
+
+        boxes.forEach((box, index) => {
+            if (index >= startIndex && index < endIndex) {
+                box.style.display = 'block';
+            } else {
+                box.style.display = 'none';
+            }
+        });
+
+        currentPageSpan.textContent = `Page ${currentPage}`;
+    };
+
+   
+    const handlePaginationButtonClick = (pageNumber) => {
+        currentPage = pageNumber;
+        showBoxes();
+    };
+
+   
+    paginationButtons.forEach((button, index) => {
+        button.addEventListener('click', () => {
+            handlePaginationButtonClick(index + 1);
+        });
+    });
+
+    
+    prevPageButton.addEventListener('click', () => {
+        if (currentPage > 1) {
+            currentPage--;
+            showBoxes();
+        }
+    });
+
+   
+    nextPageButton.addEventListener('click', () => {
+        const totalPages = Math.ceil(boxes.length / itemsPerPage);
+        if (currentPage < totalPages) {
+            currentPage++;
+            showBoxes();
+        }
+    });
+
+    
+    showBoxes();
+});

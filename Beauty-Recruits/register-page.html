@@ -68,10 +68,10 @@
 
     <div class="section-2">
             <div class="boxes-container">
-              <div class="box primary-color" onclick="toggleForm()">
+              <div class="box primary-color"  id="jobSeekersBox">
                 <div class="box-info">
             
-                        <div class="titles">
+                        <div class="center-titles">
                             <h2>Job Seekers</h2>
                           
                         </div>
@@ -83,10 +83,10 @@
                 </div>
     
           
-            <div class="box secondary-color">
+            <div class="box secondary-color" id="employersBox">
                 <div class="box-info">
             
-                    <div class="titles">
+                    <div class="center-titles">
                         <h2>Employers</h2>
                       
                     </div>
@@ -101,86 +101,192 @@
 </div>
 </div>
 
-
-<div class="form-section" style="display: none;">
+<div class="seeker">
+<div class="form-section" >
     <div class="form-container">
        
        
 
-        <form  id="registrationForm" style="display: none;">
-        <div class="title">   <h3>Create an Account as a Job Seeker</h3></div>
+        <form  id="registrationForm">
+        <div class="coloredtitle">   <h3>Create an Account as a Job Seeker</h3></div>
         <div class="form-content">
 
-           
+            <div class="col-holder">
+                <div class="col-1">
             
                 <div>
                     <label for="fullName">Full Name</label>
                     <input type="text" id="fullName" name="fullName" required>
                 </div>
-            
+                <div>
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" required>
+                </div>
+                <div>
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+                <div>
+                    <label for="expertise">Expertise</label>
+                    <input type="text" id="expertise" name="expertise">
+                </div>
+                <div>
+                    <label for="location">Location</label>
+                    <input type="text" id="location" name="location">
+                </div>
+
+                <div>
+                    <label for="resume">Resume in PDF</label>
+                    <input type="file" id="resume" name="resume" accept=".pdf">
+                </div>
+            </div>
+            <div class="col-2">
                 <div>
                     <label for="email">Email</label>
                     <input type="email" id="email" name="email" required>
                 </div>
             
-                <div>
-                    <label for="password">Password</label>
-                    <input type="password" id="password" name="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" required>
-                </div>
+                
             
                 <div>
                     <label for="confirmPassword">Confirm Password</label>
                     <input type="password" id="confirmPassword" name="confirmPassword" required>
                 </div>
             
-                <div>
-                    <label for="username">Username</label>
-                    <input type="text" id="username" name="username" required>
-                </div>
+               
             
                 <div>
                     <label for="title">Title</label>
                     <input type="text" id="title" name="title">
                 </div>
             
-                <div>
-                    <label for="expertise">Expertise</label>
-                    <input type="text" id="expertise" name="expertise">
-                </div>
+              
             
                 <div>
                     <label for="yearsOfExperience">Years of Experience</label>
                     <input type="number" id="yearsOfExperience" name="yearsOfExperience">
                 </div>
             
-                <div>
-                    <label for="location">Location</label>
-                    <input type="text" id="location" name="location">
-                </div>
+                
             
                 <div>
                     <label for="phone">Phone</label>
                     <input type="tel" id="phone" name="phone" pattern="^\+(?:[0-9] ?){6,14}[0-9]">
                 </div>
             
-                <div>
-                    <label for="resume">Resume in PDF</label>
-                    <input type="file" id="resume" name="resume" accept=".pdf">
-                </div>
-            
+              </div>
+              </div>
+              <div class="row-holder">
+                <div class="row-1">
                 <div>
                     <label for="description">Description</label><br>
-                    <textarea id="description" name="description" rows="4" cols="50"></textarea>
+                    <input id="description" name="description" rows="4" cols="50"></input>
                 </div>
+                </div></div>
             
-                
+                <div class="btn-holder">
+                    <a href="" class="Register-btn">Register Now</a>
+                    
+                </div>
             </form>
-            <div class="btn-holder">
-                <a href="" class="Register-btn">Register Now</a>
-                
-            </div>
+           
         </div>
         
+    </div>
+</div>
+</div>
+<div class="employer">
+    <div class="form-section">
+        <div class="form-container">
+           
+           
+    
+            <form  id="registrationForm" >
+            <div class="coloredtitle">   <h3>Create an Account as an Employer</h3></div>
+            <div class="form-content">
+    
+                <div class="col-holder">
+                    <div class="col-1">
+                
+                    <div>
+                        <label for="fullName">Full Name</label>
+                        <input type="text" id="fullName" name="fullName" required>
+                    </div>
+                    <div>
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" required>
+                    </div>
+                    <div>
+                        <label for="username">Username</label>
+                        <input type="text" id="username" name="username" required>
+                    </div>
+                    <div>
+                        <label for="expertise">Expertise</label>
+                        <input type="text" id="expertise" name="expertise">
+                    </div>
+                    <div>
+                        <label for="location">Location</label>
+                        <input type="text" id="location" name="location">
+                    </div>
+    
+                    <div>
+                        <label for="resume">Resume in PDF</label>
+                        <input type="file" id="resume" name="resume" accept=".pdf">
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div>
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                
+                    
+                
+                    <div>
+                        <label for="confirmPassword">Confirm Password</label>
+                        <input type="password" id="confirmPassword" name="confirmPassword" required>
+                    </div>
+                
+                   
+                
+                    <div>
+                        <label for="title">Title</label>
+                        <input type="text" id="title" name="title">
+                    </div>
+                
+                  
+                
+                    <div>
+                        <label for="yearsOfExperience">Years of Experience</label>
+                        <input type="number" id="yearsOfExperience" name="yearsOfExperience">
+                    </div>
+                
+                    
+                
+                    <div>
+                        <label for="phone">Phone</label>
+                        <input type="tel" id="phone" name="phone" pattern="^\+(?:[0-9] ?){6,14}[0-9]">
+                    </div>
+                
+                  </div>
+                  </div>
+                  <div class="row-holder">
+                    <div class="row-1">
+                    <div>
+                        <label for="description">Description</label><br>
+                        <input id="description" name="description" rows="4" cols="50"></input>
+                    </div>
+                    </div></div>
+                
+                    <div class="btn-holder">
+                        <a href="" class="Register-btn">Register Now</a>
+                        
+                    </div>
+                </form>
+               
+            </div>
+            
+        </div>
     </div>
 </div>
  <!-- third Section -->
@@ -255,22 +361,26 @@
     </footer>
 </body>
 
+
 <script>
-    // Function to toggle the visibility of the registration form
-    function toggleForm() {
-        var form = document.getElementById("registrationForm");
-        if (form.style.display === "none") {
-            form.style.display = "block";
-        } else {
-            form.style.display = "none";
-        }
-        var section = document.querySelector(".form-section");
-        if (section.style.display === "none") {
-            section.style.display = "flex";
-        } else {
-            section.style.display = "none";
-        }
-       
-    }
-</script>
+
+    document.addEventListener('DOMContentLoaded', (event) => {
+        const jobSeekersBox = document.getElementById('jobSeekersBox');
+        const employersBox = document.getElementById('employersBox');
+        const employerLoginForm = document.querySelector('.employer');
+        const seekerLoginForm = document.querySelector('.seeker');
+    
+        jobSeekersBox.addEventListener('click', () => {
+            seekerLoginForm.style.display = 'block';
+            employerLoginForm.style.display = 'none';
+        });
+    
+        employersBox.addEventListener('click', () => {
+            employerLoginForm.style.display = 'block';
+            seekerLoginForm.style.display = 'none';
+        });
+    });
+    
+    </script>
+    <script src="Assets/scripts/script-navbar-responsive.js"></script>
 </html>

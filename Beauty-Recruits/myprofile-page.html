@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Muli&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>My profile</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="Assets/Styles/style.css">
+    <link rel="stylesheet" href="Assets/Styles/style-navbar.css">
+    <link rel="stylesheet" href="Assets/Styles/style-myprofile-page.css">
+    
+
+</head>
+
+<body>
+
+    <div class="main">
+
+        <div class="navbar">
+
+            <div class="logo">
+                <img src="your-logo.png" alt="Logo">
+            </div>
+
+            <ul class="navbar-center" id="navbar">
+                <li ><a href="homexnav.html">Home</a></li>
+                <li><a href="">Jobs</a></li>
+                <li><a href="">Job Seekers</a></li>
+                <li><a href="">Employers</a></li>
+               
+            </ul>
+
+           <ul class="icons">
+            <li>
+                <i class='fas fa-user-alt' id="profile-dropdown"></i>
+                <i class="fa fa-times" id="profile-close-btn"></i>
+            </li>
+            <li>
+                <i class="fas fa-bars" id="hamburger-menu"></i>
+                <i class="fa fa-times" id="navbar-close-btn"></i>
+            </li>
+        </ul>
+            <div class="user" id="profile">
+                
+                <a href="homexnav.html" class="custom-button navbar-btn primary-color">Logout</a>
+                <a href="myprofile-page.html" class="custom-button navbar-btn secondary-color">MyProfile</a>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="section-1">
+        <div class="titles-holder">
+            <h1>Candidate</h1>
+            <span><a href="https://fc-bs.com/home">Home  / </a> <span class="active">  Candidate Profile</span> </span>
+           
+    
+                           
+        
+        </div>
+    </div>
+
+    <div class="section-2">
+        <div class="div-holder">
+            <div class="leftdiv">
+                
+                <div class="text-container">
+                    <div class="title-1">  <h9>Profile</h9></div>
+                    <div class="text1">
+                                    <h7><b>anthony sarkis</b></h7>
+                                    <h8>Managing Director</h8>
+                                </div>
+                        
+                            <div class="text2">
+                                <ul class="list">
+                                
+                                        <li class="active" class="rdiv-1"><a href="">Profile</a></li>
+                                        <li class="rdiv-2"><a href="">Dashboard</a></li>
+                                        <li><a href="">Job History</a></li>
+                                        <li><a href="">Change Password</a></li>
+                                        <li><a href="">Log Out</a></li>
+                                    </ul>
+                                </ul>
+                            </div>
+                        </div>
+                            </div>
+
+        
+            <div class="rightdiv-1" >
+               
+                   
+                        <form   class="profile-div" id="profile-form" >
+                        
+                            <div class="header-title">   <h9>Personal Details</h9></div>
+                            <div class="col-holder">
+                
+                                <div class="col-1">
+                            <div>
+                                    <label for="fullName">Full Name</label>
+                                    <input type="text" id="fullName" name="fullName" required>
+                                </div>
+                                <div>
+                                    <label for="email">Email</label>
+                                    <input type="email" id="email" name="email" required>
+                                </div>
+                            </div>
+                            <div class="col-2">
+                                <div>
+                                    <label for="username">Username</label>
+                                    <input type="text" id="username" name="username" required>
+                                </div>
+                            
+                              
+                                <div>
+                                    <label for="phone">Phone</label>
+                                    <input type="tel" id="phone" name="phone" pattern="^\+(?:[0-9] ?){6,14}[0-9]">
+                                </div>
+
+                                </div>
+                            </div>
+                                <div class="header-title">   <h10>Career And Application Information</h10></div>
+                              <div class="row-holder">
+                                <div class="row-1">
+                                <div>
+                                    <label for="description">Objective</label><br>
+                                    <input id="description" name="description" ></input>
+                                </div>
+                            </div>
+                            <div class="row-2">
+                                <div>
+                                    <label for="yearsOfExperience">Experience in (Years)</label>
+                                    <input type="number" id="yearsOfExperience" name="yearsOfExperience">
+                                </div>
+                                <div>
+                                    <label for="resume">Update Resume in PDF</label>
+                                    <input type="file" id="resume" name="resume" accept=".pdf">
+                                </div>
+                               
+                            </div>
+                            <div class="btn-holder">
+                                <a href="" class="Register-btn">Save</a>
+                                
+                            </div>
+                            </div>
+                                
+                               
+                                
+                        </form>    
+                            
+
+                
+            </div>
+    
+            <div class="rightdiv-2" >  
+                <div class="dash-div">
+                <div class="header-title">   <h10>Dashboard</h10></div>
+                <div class="box-container">
+                    <div class="box">
+                        <div class="box-info">
+                            <div class="nb"><h11>1</h11></div>
+                            <div class="txt"><h12>Total Applications</h12></div>
+                        </div>
+                    </div> 
+                </div>
+                <div class="header-title">   <h13>Recent Activities</h13></div>
+                <div class="thin"><h14>You applied to 1</h14></div>
+                     </div>
+                    </div> 
+                     
+        
+        </div>
+    </div>
+
+
+
+  
+
+
+
+ <!-- third Section -->
+
+ <div class="section-3">
+    <div class="columns-container">
+        <div class="column-1">
+            <div class="holder">
+       <img src="" alt="Image"> 
+        <p class="p2">Beauty-Recruits makes it easy for you to find your perfect job within all sectors of the hair, spa, medical spa and beauty industry. 
+            There are always hundreds of exciting job vacancies being advertised on our site.</p>
+  <ul class="social-icons">
+    <li class="social-icon"><i class="fab fa-instagram"></i></li>
+    <li class="social-icon"><i class="fab fa-linkedin"></i></li>
+   </ul> 
+
+            </div>
+        </div>
+        <div class="column-2">
+            <div class="titles-2-holder">
+                <h5>Contact</h5>
+
+                <div class="container" >
+                    <div class="icon"><i class='bx bx-envelope'></i></div>
+                    <div class="text">
+                        <div class="title"><span >Email:</span></div>
+                        <div class="subt"><p ><a href="">Admin@beauty-recruits.com </a></p></div>
+                    </div>
+
+                </div>
+    
+                <div class="container" >
+                    <div class="icon"><i class='bx bx-location-plus'></i></div>
+                    <div class="text">
+                        <div class="title"><span > Address:</span></div>
+                        <div class="subt"><p ><a  href="">PO box 118683, Dubai UAE</a></p></div>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </div>
+        <div class="column-3">
+            <div class="titles-2-holder">
+                <h5>Customer Care</h5>
+                <div class="links-list">
+                    <ul class="links">
+                        <li><a href="">Terms of Use</a></li>
+                        <li><a href="">Acceptable Use Policy</a></li>
+                        <li><a href="">Disclaimer</a></li>
+                        <li><a href="">DMCA Policy</a></li>
+                        <li><a href="">Privacy Policy</a></li>
+                        <li><a href="">FAQ</a></li>
+                        
+                       </ul>
+
+                </div>
+        </div>
+    </div>
+   
+   
+   
+   
+ 
+</div>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>Copyright &copy; 2021 <b style="color: #F78154;">Beauty Recruits.</b></p>
+    </footer>
+</body>
+<script>
+    // Function to toggle the visibility of the registration form
+    function toggleForm() {
+        var form = document.getElementById("registrationForm");
+        if (form.style.display === "none") {
+            form.style.display = "block";
+        } else {
+            form.style.display = "none";
+        }
+        var section = document.querySelector(".form-section");
+        if (section.style.display === "none") {
+            section.style.display = "flex";
+        } else {
+            section.style.display = "none";
+        }
+       
+    }
+
+    document.addEventListener('DOMContentLoaded', (event) => {
+    const listItems = document.querySelectorAll('.list li');
+    
+    listItems.forEach(item => {
+        item.addEventListener('click', () => {
+            listItems.forEach(li => li.classList.remove('active'));
+            item.classList.add('active');
+        });
+    });
+});
+
+document.addEventListener('DOMContentLoaded', (event) => {
+    const listItems = document.querySelectorAll('.list li');
+    const rightDiv1 = document.querySelector('.rightdiv-1');
+    const rightDiv2 = document.querySelector('.rightdiv-2');
+
+    listItems.forEach(item => {
+        item.addEventListener('click', (e) => {
+            e.preventDefault(); 
+            
+       
+            if (item.classList.contains('rdiv-1')) {
+                rightDiv1.style.display = 'block';
+                rightDiv2.style.display = 'none';
+            } else if (item.classList.contains('rdiv-2')) {
+                rightDiv1.style.display = 'none';
+                rightDiv2.style.display = 'block';
+            }
+          
+        });
+    });
+});
+
+
+
+
+
+
+</script>
+<script src="Assets/scripts/script-navbar-responsive.js"></script>
+
+</html>

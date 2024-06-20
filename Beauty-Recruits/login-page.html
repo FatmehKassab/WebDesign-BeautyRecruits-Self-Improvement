@@ -68,7 +68,7 @@
 
     <div class="section-2">
             <div class="boxes-container">
-              <div class="box primary-color">
+              <div class="box primary-color" id="jobSeekersBox">
                 <div class="box-info">
             
                         <div class="titles">
@@ -83,7 +83,7 @@
                 </div>
     
           
-            <div class="box secondary-color">
+            <div class="box secondary-color" id="employersBox">
                 <div class="box-info">
             
                     <div class="titles">
@@ -100,7 +100,63 @@
   </div> 
 </div>
 </div>
+<div class="seeker">
+    <div class="form-section">
+        <div class="form-container">
+            <form id="loginForm">
+                <div class="coloredtitle"><h3>Log in as a Job Seeker</h3></div>
+                <div class="form-content">
+                    <div>
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" >
+                        <div class="error-message error"></div>
+                    </div>
+                    <div>
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password">
+                        <div class="error-message error"></div>
+                    </div>
+                    <div class="btn-holder">
+                        <button type="submit" class="Login-btn">Login</button>
+                    </div>
+                    <div class="reset"><a href="password.html">Reset Password</a></div>
+                </div>
 
+            </form>
+       
+        </div>
+    </div>
+</div>
+
+
+
+<div class="employer">
+    <div class="form-section">
+        <div class="form-container">
+            <form id="loginForm">
+                <div class="coloredtitle"><h3>Log in as an Employer</h3></div>
+                <div class="form-content">
+                    <div>
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" >
+                        <div class="error-message error"></div>
+                    </div>
+                    <div>
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password">
+                        <div class="error-message error"></div>
+                    </div>
+                    <div class="btn-holder">
+                        <button type="submit" class="Login-btn">Login</button>
+                    </div>
+                    <div class="reset"><a href="password.html">Reset Password</a></div>
+                </div>
+            </form>
+            
+        </div>
+    
+     </div>
+    </div>
  <!-- third Section -->
 
  <div class="section-3">
@@ -173,4 +229,26 @@
     </footer>
 </body>
 
+<script>
+
+document.addEventListener('DOMContentLoaded', (event) => {
+    const jobSeekersBox = document.getElementById('jobSeekersBox');
+    const employersBox = document.getElementById('employersBox');
+    const employerLoginForm = document.querySelector('.employer');
+    const seekerLoginForm = document.querySelector('.seeker');
+
+    jobSeekersBox.addEventListener('click', () => {
+        seekerLoginForm.style.display = 'block';
+        employerLoginForm.style.display = 'none';
+    });
+
+    employersBox.addEventListener('click', () => {
+        employerLoginForm.style.display = 'block';
+        seekerLoginForm.style.display = 'none';
+    });
+});
+
+</script>
+<script src="Assets/scripts/script-navbar-responsive.js"></script>
+<script src="Assets/scripts/script-login-error.js"></script>
 </html>

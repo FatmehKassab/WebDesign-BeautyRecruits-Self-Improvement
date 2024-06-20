@@ -91,6 +91,7 @@ z-index: 9999;
 
     a:hover {
         color: rgb(var(--secondary-color));
+        
     }
 
     .navbar-center .fa.fa-times {
